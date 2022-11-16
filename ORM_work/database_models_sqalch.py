@@ -15,6 +15,12 @@ class Country(Base):
     name = Column(Text)
 
 
+class Country(Base):
+    __tablename__ = 'country'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(Text)
+
 class Player(Base):
     __tablename__ = 'Player'
 
@@ -37,11 +43,7 @@ class Team(Base):
     team_short_name = Column(Text)
 
 
-class Country(Base):
-    __tablename__ = 'country'
 
-    id = Column(Integer, primary_key=True)
-    name = Column(Text)
 
 
 t_sqlite_sequence = Table(

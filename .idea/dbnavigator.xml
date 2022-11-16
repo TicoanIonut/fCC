@@ -13,7 +13,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="2a039a65-f111-49c9-91de-5d624fcec961">
-      <console name="Connection" type="STANDARD" schema="main" session="Main"><![CDATA[select * from "Player"]]></console>
+      <console name="Connection" type="STANDARD" schema="main" session="Main"><![CDATA[select * from "Player" where "height" > 190]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -28,6 +28,9 @@
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
     <filters />
+  </component>
+  <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
+    <recently-used-interfaces />
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
