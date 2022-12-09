@@ -6,12 +6,10 @@ engine = create_engine('sqlite:///database.sqlite', echo=True)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-
-# res = session.query(Player).filter(Player.height > 195)
-# for s in res:
-# 	print(s.player_name)
-
-res = session.query(Player).order_by(Player.height)
+i = 0
+res = session.query(Player).filter(Player.height > 195).filter(Player.weight > 200).order_by(Player.player_name)
 for s in res:
-	print(s.player_name)
+	r = i, s.player_name, s.height, s.weight
+	print(r)
+	i += 1
 
