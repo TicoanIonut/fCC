@@ -15,9 +15,10 @@
     <connection id="2a039a65-f111-49c9-91de-5d624fcec961">
       <console name="Connection" type="STANDARD" schema="main" session="Main"><![CDATA[select * from "Player" where "height" > 190]]></console>
       <console name="Connection 1" type="STANDARD" schema="main" session="Main" />
-      <console name="Connection 1" type="STANDARD" schema="main" session="Main" />
-      <console name="Connection 1" type="STANDARD" schema="main" session="Main" />
     </connection>
+  </component>
+  <component name="DBNavigator.Project.DatabaseEditorStateManager">
+    <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
