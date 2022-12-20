@@ -20,9 +20,10 @@ def check_proxies():
 		except:
 			continue
 		if res.status_code == 200:
-			with open('valid_proxy.txt', 'a') as fw:
+			with open('valid_proxy.txt', 'a+') as fw:
 				fw.write(str(proxy) + '\n')
 				print(proxy)
+
 			
 			
 for _ in range(10):
