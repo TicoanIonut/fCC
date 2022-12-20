@@ -2,6 +2,7 @@ import requests
 
 with open('valid_proxy.txt', 'r') as f:
 	proxies = f.read().split('\n')
+	# print(len(proxies))
 	
 sites_to_check = ['http://books.toscrape.com/',
                   'http://books.toscrape.com/catalogue/category/books/fantasy_19/index.html',
