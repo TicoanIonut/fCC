@@ -48,4 +48,4 @@ print(f'The keypad is\n'
 
 
 result = entryTime(s, keypad)
-print(f'The minimum numer of seconds is to enter the code is\n{result}')
+print(f'The minimum numer of seconds to enter the code is\n{result}')
