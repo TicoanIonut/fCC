@@ -14,7 +14,6 @@
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="2a039a65-f111-49c9-91de-5d624fcec961">
       <console name="Connection" type="STANDARD" schema="main" session="Main"><![CDATA[select * from "Player" where "height" > 190]]></console>
-      <console name="Connection 1" type="STANDARD" schema="main" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -22,6 +21,9 @@
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="2a039a65-f111-49c9-91de-5d624fcec961" dataset="main.Country" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
