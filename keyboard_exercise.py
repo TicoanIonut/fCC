@@ -34,7 +34,21 @@ def entryTime(s, keypad):
 def calc_distance(char1, char2):
     row_diff = abs(char1 // 3 - char2 // 3)
     col_diff = abs(char1 % 3 - char2 % 3)
-    return max(row_diff, col_diff)
+    return max(row_diff, col_diff), print(max(row_diff, col_diff))
+    
+
+
+def entryTimes(s, keypad):
+    key_positions = {}
+    for i in range(len(keypad)):
+        key_positions[keypad[i]] = (i // 3, i % 3)
+    time = 0
+    x, y = key_positions[s[0]]
+    for i in range(1, len(s)):
+        next_x, next_y = key_positions[s[i]]
+        time += abs(next_x - x) + abs(next_y - y)
+        x, y = next_x, next_y
+    return time
 
 
 s = [random.randint(1, 9) for _ in range(random.randrange(5, 99))]
@@ -45,7 +59,15 @@ print(f'The keypad is\n'
       f'{keypad[0]} | {keypad[1]} | {keypad[2]}\n'
       f'{keypad[3]} | {keypad[4]} | {keypad[5]}\n'
       f'{keypad[6]} | {keypad[7]} | {keypad[8]}')
-
+# s = [1,2,3,4]
+# keypad = [1,2,3,4]
 
 result = entryTime(s, keypad)
-print(f'The minimum numer of seconds to enter the code is\n{result}')
+result2 = entryTimes(s, keypad)
+print(f'The minimum numer of seconds to enter the code is\nfirst func {result}\nsecond func {result2}')
+
+
+
+
+
+
