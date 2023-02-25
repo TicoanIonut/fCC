@@ -1,10 +1,10 @@
 import openai
 import pandas as pd
 import datetime
-from api_secrets import API_KEY
+from utils import GPT_API_KEY
 
 now = datetime.datetime.now()
-openai.api_key = API_KEY
+openai.api_key = GPT_API_KEY
 gpt = []
 inp = []
 

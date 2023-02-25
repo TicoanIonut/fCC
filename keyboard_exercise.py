@@ -20,7 +20,6 @@
 #  1<=s<=10**5
 #  keypad = 9
 # keypad[i] is a number from 1 to 9
-
 import random
 
 
@@ -30,7 +29,8 @@ def entryTime(s, keypad):
     for char in s:
         char_index = keypad.index(char)
         if prev_char is not None:
-            time_taken += calc_distance(prev_char, char_index)
+            distance = calc_distance(prev_char, char_index)
+            time_taken += distance
         prev_char = char_index
     return time_taken
 
@@ -39,7 +39,7 @@ def calc_distance(char1, char2):
     row_diff = abs(char1 // 3 - char2 // 3)
     col_diff = abs(char1 % 3 - char2 % 3)
     return max(row_diff, col_diff)
-    
+
 
 def entryTime2(s, keypad):
     key_positions = {}
@@ -49,14 +49,14 @@ def entryTime2(s, keypad):
     x, y = key_positions[s[0]]
     for i in range(1, len(s)):
         next_x, next_y = key_positions[s[i]]
-        time += abs(next_x - x) + abs(next_y - y)
+        time += max(abs(next_x - x), abs(next_y - y))
         x, y = next_x, next_y
     return time
 
 
-# s = [1,2,3,4]
-# keypad = [1,2,3,4,5,6,7,8,9]
-s = [random.randint(1, 9) for _ in range(random.randrange(5, 99))]
+# s = [1, 2, 3, 4]
+# keypad = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+s = [random.randint(1, 9) for _ in range(random.randrange(5, 11))]
 code = ''.join(map(str, s))
 print(f'The code is {code}')
 keypad = random.sample(range(1, 10), 9)

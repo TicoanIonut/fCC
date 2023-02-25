@@ -10,11 +10,9 @@
 #     print('Not Weird')
 
 
-n = int(input())
-r = []
-for j in range(n+1):
-	r.append(j)
-x = "".join(str(i) for i in r)
-print(x)
-
-
+# n = int(input())
+# r = []
+# for j in range(n+1):
+# 	r.append(j)
+# x = "".join(str(i) for i in r)
+# print(x)
