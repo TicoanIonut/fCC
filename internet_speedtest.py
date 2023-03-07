@@ -1,4 +1,4 @@
-import internet_speedtest as st
+import speedtest as st
 
 # Set Best Server
 server = st.Speedtest()
