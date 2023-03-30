@@ -24,7 +24,7 @@ openai.api_key = GPT_API_KEY
             # gpt.append(response['choices'][0]['text'])
             # return response['choices'][0]['text']
         # print(chatbot_response(uinp))
-
+#some mod
 
 chat_log = []
 print('\nI am GPT ask me anything!\nType quit, if you want to quit the program.\n\n\n')
